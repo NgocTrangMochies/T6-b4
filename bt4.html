@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-rows: 100px auto 50px;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 5px;
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            background-color: rgb(128, 0, 0);
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 6, 128);
+        }
+
+        .content {
+            grid-column: 2 / span 1;
+            padding: 10px 50px;
+            text-align: justify;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .separator {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: rgb(128, 0, 0);
+            left: 0;
+        }
+
+        .top-line {
+            top: 100px;
+        }
+
+        .bottom-line {
+            bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item content">
+            5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Vel voluptatem nam nobis quidem, delectus impedit ex consequuntur.
+            Quos, tenetur iusto iure quam quaerat autem suscipit quo. 
+            Praesentium sequi tenetur necessitatibus perferendis.
+        </div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+
+        <div class="separator top-line"></div>
+        <div class="separator bottom-line"></div>
+    </div>
+
+</body>
+</html>
